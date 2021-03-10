@@ -26,5 +26,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) {
             playerMovement.Jump();
         }
+
+
+        if (Input.GetMouseButtonDown(0)) {
+            playerMovement.CastSpell();
+        }
     }
 }
