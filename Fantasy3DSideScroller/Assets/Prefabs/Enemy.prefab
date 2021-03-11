@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 7566630352339664717}
   - component: {fileID: 7566630352339664716}
   - component: {fileID: 2126998369077277180}
+  - component: {fileID: 3401004732908847626}
+  - component: {fileID: 1111318362044479116}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -131,3 +133,36 @@ MonoBehaviour:
   onHit:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3401004732908847626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7566630352339664719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f650126b43492b54ca4b39f79a17b785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  damage: 1
+  mana: 0
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1111318362044479116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7566630352339664719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba272f800de60c54d843e50de0415555, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

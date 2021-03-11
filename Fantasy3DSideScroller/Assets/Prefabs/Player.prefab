@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4896087860460209170}
   - component: {fileID: 5797783684800189907}
   - component: {fileID: 8418291743312751036}
+  - component: {fileID: 9210575314013557119}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -143,6 +144,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbfffae3287acf746be37d4c80b2d0f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9210575314013557119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981037379206796626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f650126b43492b54ca4b39f79a17b785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  damage: 1
+  mana: 0
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3101308888813961671
 GameObject:
   m_ObjectHideFlags: 0
