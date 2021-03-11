@@ -16,11 +16,11 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         if (Input.GetKey(KeyCode.D)) {
-            playerMovement.MoveForward();
+            playerMovement.MoveRight();
         }
 
         if (Input.GetKey(KeyCode.A)) {
-            playerMovement.MoveBackward();
+            playerMovement.MoveLeft();
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) {
