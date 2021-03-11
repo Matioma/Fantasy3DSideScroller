@@ -19,7 +19,6 @@ public class EnemyBehaviour : MonoBehaviour
         if (collision.gameObject.tag.ToLower().Trim().Equals("player"))
         {
             collision.gameObject.GetComponent<Stats>().Hit(stats.Damage);
-            //Debug.Log(collision.gameObject.tag);
         }
     }
 }
