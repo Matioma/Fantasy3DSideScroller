@@ -52,7 +52,9 @@ public class PlayerMovement : MonoBehaviour
 
 
     public void MoveForward() {
-        Vector3 velocityY = new Vector3(0, rigidbody.velocity.y,0);
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+
+        Vector3 velocityY = new Vector3(0, rigidbody.velocity.y, 0);
         Vector3 velocityXZplane = (new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z) + transform.forward * speed).normalized * speed;
 
         rigidbody.velocity = velocityXZplane+ velocityY;
@@ -60,8 +62,10 @@ public class PlayerMovement : MonoBehaviour
 
 
     public void MoveBackward() {
+        transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+
         Vector3 velocityY = new Vector3(0, rigidbody.velocity.y, 0);
-        Vector3 velocityXZplane = (new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z) + -transform.forward * speed).normalized * speed;
+        Vector3 velocityXZplane = (new Vector3(rigidbody.velocity.x, 0, rigidbody.velocity.z) + transform.forward * speed).normalized * speed;
 
         rigidbody.velocity = velocityXZplane + velocityY;
     }
