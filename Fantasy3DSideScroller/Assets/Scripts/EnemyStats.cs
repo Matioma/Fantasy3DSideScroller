@@ -21,9 +21,8 @@ public class EnemyStats : MonoBehaviour
             return health;
         }
         set {
-            Debug.Log(value);
             health = value;
-            if (health < 0) {
+            if (health <= 0) {
                 health = 0;
                 onDeath?.Invoke();     
             }

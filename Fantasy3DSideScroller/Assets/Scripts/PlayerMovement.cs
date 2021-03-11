@@ -22,6 +22,11 @@ public class PlayerMovement : MonoBehaviour
     float skillTimer;
 
 
+    [SerializeField]
+    GameObject weapon;
+    Animator animator;
+
+
     bool CanCastSkill {
         get { return skillTimer<=0; }
     }
@@ -33,10 +38,12 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
+        animator =(weapon)?weapon.GetComponent<Animator>():null;
     }
 
     private void Update()
     {
+       // Attack();
         if (!CanCastSkill)
         {
             skillTimer -= Time.deltaTime;
@@ -80,6 +87,15 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    public void Attack()
+    {
+        if (animator != null) {
+            //Debug.Log("Cool");
+            animator.SetTrigger("Swoosh");
+        }
+    }
+
 
     private void SetSkillOnCooldown()
     {

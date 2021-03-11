@@ -129,7 +129,8 @@ MonoBehaviour:
   speed: 10
   jumpForce: 700
   skillDamage: 10
-  skillCoolDown: 0.3
+  skillCoolDown: 1
+  weapon: {fileID: 3463609673157921111}
 --- !u!114 &8418291743312751036
 MonoBehaviour:
   m_ObjectHideFlags: 0

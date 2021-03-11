@@ -31,5 +31,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) {
             playerMovement.CastSpell();
         }
+
+        if (Input.GetKeyDown(KeyCode.F)) {
+            playerMovement.Attack();
+        }
     }
 }
