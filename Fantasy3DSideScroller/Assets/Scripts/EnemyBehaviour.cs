@@ -29,14 +29,7 @@ public class EnemyBehaviour : MonoBehaviour
         stats = GetComponent<Stats>();
         collider = GetComponent<SphereCollider>();
         rigidbody = GetComponent<Rigidbody>();
-        //ValidateSphereCollider();
-
-        //possibleTargets = FindObjectsOfType<PlayerMovement>();
     }
-
-
-
-
 
     private void Update()
     {
@@ -49,24 +42,9 @@ public class EnemyBehaviour : MonoBehaviour
         if (target == null) return;
 
         Vector3 targetPosition = new Vector3(target.position.x, transform.position.y, target.position.z);
-        //Quaternion newRotation = Quaternion.LookRotation(newForward, Vector3.up);
-        //transform.rotation = newRotation;
         transform.LookAt(targetPosition);
         rigidbody.velocity = transform.forward * Speed;
     }
-
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    if (target != null) return;
-    //    if (other.gameObject.tag.Equals("Player"))
-    //    {
-    //        if (canSee(other.transform)) {
-    //            Debug.Log("Hit the palyer");
-    //            target = other.transform;
-    //        }
-    //    }   
-    //}
-
 
     void anyTargetInRange() {
         foreach (var atarget in possibleTargets) {
@@ -79,7 +57,6 @@ public class EnemyBehaviour : MonoBehaviour
             }
         }
     }
-
 
     bool canSee(Transform ptransform) {
         RaycastHit hit;
@@ -95,7 +72,6 @@ public class EnemyBehaviour : MonoBehaviour
         }
         return false;
     }
-
 
     private void OnCollisionEnter(Collision collision)
     {
