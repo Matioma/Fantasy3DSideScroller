@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class WeaponEffect : MonoBehaviour
 {
-    public int Damage{ get; set; } =1;
+    //public int Damage{ get; set; } =1;
+
+    Stats stats;
+    public void Awake()
+    {
+        stats = GetComponentInParent<Stats>();
+    }
+
+
 
 
     private void OnTriggerEnter(Collider other)
@@ -13,8 +21,7 @@ public class WeaponEffect : MonoBehaviour
         {
             EnemyStats enemy = other.gameObject.GetComponent<EnemyStats>();
 
-            if (enemy != null) enemy.Hit(Damage);
-            //Debug.Log(other.gameObject.tag);
+            if (enemy != null) enemy.Hit(stats.Damage);
         }
       
     }
