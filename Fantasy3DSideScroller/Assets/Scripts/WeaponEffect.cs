@@ -12,9 +12,6 @@ public class WeaponEffect : MonoBehaviour
         stats = GetComponentInParent<Stats>();
     }
 
-
-
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag.ToLower().Trim().Equals("enemy"))

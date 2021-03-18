@@ -4,13 +4,17 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Stats))]
-[RequireComponent(typeof(SphereCollider))]
+//[RequireComponent(typeof(SphereCollider))]
 [RequireComponent(typeof(Rigidbody))]
 public class EnemyBehaviour : MonoBehaviour
 {
     private Stats stats;
     new private SphereCollider collider;
     Rigidbody rigidbody;
+
+
+    [SerializeField]
+    Transform[] possibleTargets;
 
 
     Transform target =null;
@@ -25,19 +29,18 @@ public class EnemyBehaviour : MonoBehaviour
         stats = GetComponent<Stats>();
         collider = GetComponent<SphereCollider>();
         rigidbody = GetComponent<Rigidbody>();
-        ValidateSphereCollider();
+        //ValidateSphereCollider();
+
+        //possibleTargets = FindObjectsOfType<PlayerMovement>();
     }
 
-    private void ValidateSphereCollider() {
-        if (!collider.isTrigger) Debug.LogWarning("Sphere collider in enemy behvaiour should be trigger to call onTriggerEvents");
 
-        collider.radius = detectionRange;
-    }
 
 
 
     private void Update()
     {
+        anyTargetInRange();
         FollowTarget();
     }
 
@@ -52,16 +55,29 @@ public class EnemyBehaviour : MonoBehaviour
         rigidbody.velocity = transform.forward * Speed;
     }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (target != null) return;
-        if (other.gameObject.tag.Equals("Player"))
-        {
-            if (canSee(other.transform)) {
-                Debug.Log("Hit the palyer");
-                target = other.transform;
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (target != null) return;
+    //    if (other.gameObject.tag.Equals("Player"))
+    //    {
+    //        if (canSee(other.transform)) {
+    //            Debug.Log("Hit the palyer");
+    //            target = other.transform;
+    //        }
+    //    }   
+    //}
+
+
+    void anyTargetInRange() {
+        foreach (var atarget in possibleTargets) {
+            if ((atarget.position - transform.position).sqrMagnitude <= detectionRange * detectionRange) {
+                if (canSee(atarget))
+                {
+                    Debug.Log("Hit the palyer");
+                    target = atarget;
+                }
             }
-        }   
+        }
     }
 
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 131.15268, g: 162.57007, b: 215.2687, a: 1}
+  m_IndirectSpecularColor: {r: 131.16855, g: 162.52502, b: 215.10977, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -259,7 +259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168218571}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.019999983, y: 1.196, z: 1.8102684}
+  m_LocalPosition: {x: 0.019999983, y: 1.196, z: 1.8102899}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 405591765}
@@ -2024,6 +2024,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922069171}
   m_Mesh: {fileID: 4300002, guid: 6a3a3adae1f3844bdbb03aff7a7893e2, type: 3}
+--- !u!4 &1002970295 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 981037379206796630, guid: ef66af20706e2a444a963e86679a1e95,
+    type: 3}
+  m_PrefabInstance: {fileID: 981037378437398169}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1037846703
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,7 +2060,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037846703}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.019999983, y: 1.196, z: -0.6870667}
+  m_LocalPosition: {x: 0.019999983, y: 1.196, z: -0.68707204}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 405591765}
@@ -4061,7 +4067,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059789766}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5102682, y: 1.196, z: 1.1761342}
+  m_LocalPosition: {x: 2.5102897, y: 1.196, z: 1.176145}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 405591765}
@@ -4822,8 +4828,18 @@ PrefabInstance:
     - target: {fileID: 1111318362044479116, guid: dec56916bc0c9584792363716b23f449,
         type: 3}
       propertyPath: detectionRange
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1111318362044479116, guid: dec56916bc0c9584792363716b23f449,
+        type: 3}
+      propertyPath: possibleTargets.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1111318362044479116, guid: dec56916bc0c9584792363716b23f449,
+        type: 3}
+      propertyPath: possibleTargets.Array.data[0]
+      value: 
+      objectReference: {fileID: 1002970295}
     - target: {fileID: 7566630352339664712, guid: dec56916bc0c9584792363716b23f449,
         type: 3}
       propertyPath: m_RootOrder
@@ -4884,6 +4900,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3401004732908847626, guid: dec56916bc0c9584792363716b23f449, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dec56916bc0c9584792363716b23f449, type: 3}
