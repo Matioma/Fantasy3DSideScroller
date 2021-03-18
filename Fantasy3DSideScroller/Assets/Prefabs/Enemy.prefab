@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 7566630352339664714}
   - component: {fileID: 7566630352339664717}
   - component: {fileID: 7566630352339664716}
-  - component: {fileID: 2126998369077277180}
-  - component: {fileID: 3401004732908847626}
   - component: {fileID: 1111318362044479116}
+  - component: {fileID: 1004690219668296865}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -114,46 +113,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 82
   m_CollisionDetection: 0
---- !u!114 &2126998369077277180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7566630352339664719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 197d65e62030faf4a808c44cf4b113a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  onDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  onHit:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &3401004732908847626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7566630352339664719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f650126b43492b54ca4b39f79a17b785, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  damage: 1
-  mana: 0
-  onDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  onHit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1111318362044479116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,3 +125,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba272f800de60c54d843e50de0415555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1004690219668296865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7566630352339664719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf3d3fca6d119e7419665f62bad18a3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  damage: 1
+  mana: 0
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
+  onNotEnoughMana:
+    m_PersistentCalls:
+      m_Calls: []

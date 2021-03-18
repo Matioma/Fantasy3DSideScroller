@@ -18,19 +18,19 @@ public class Stats : MonoBehaviour
 
     public UnityEvent onDeath;
     public UnityEvent onHit;
+    public UnityEvent onNotEnoughMana;
 
     private void Start()
     {
         onDeath.AddListener(Die);
     }
-
     public int Health
     {
         get
         {
             return health;
         }
-        set
+        private set
         {
             health = value;
             if (health <= 0)
@@ -40,17 +40,26 @@ public class Stats : MonoBehaviour
             }
         }
     }
-
-
+    public int Mana {
+        get { return mana; }
+        set {
+            if (value > mana) {
+                onNotEnoughMana?.Invoke();
+                return;
+            }
+            mana= value;
+        }
+    }
     public void Die()
     {
         Destroy(gameObject);
     }
-
     public void Hit(int damage)
     {
         Health -= damage;
         onHit?.Invoke();
     }
-
+    public void UseMana(int amount) {
+        Mana -= amount;
+    }
 }
