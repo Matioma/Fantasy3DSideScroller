@@ -6,11 +6,11 @@ using UnityEngine.Events;
 public class Stats : MonoBehaviour
 {
     [SerializeField]
-    int health=1;
+    int health = 1;
     [SerializeField]
-    int damage=1;
+    int damage = 1;
 
-    public int Damage { get { return damage; } }
+    public int Damage { get { return damage; } private set{ damage = value; } }
 
     [SerializeField]
     int mana;
@@ -22,7 +22,7 @@ public class Stats : MonoBehaviour
 
     private void Start()
     {
-        onDeath.AddListener(Die);
+        //onDeath.AddListener(Die);
     }
     public int Health
     {
@@ -42,7 +42,7 @@ public class Stats : MonoBehaviour
     }
     public int Mana {
         get { return mana; }
-        set {
+        private set {
             if (value > mana) {
                 onNotEnoughMana?.Invoke();
                 return;
@@ -61,5 +61,12 @@ public class Stats : MonoBehaviour
     }
     public void UseMana(int amount) {
         Mana -= amount;
+    }
+
+
+    public void ResetStats(int health, int damage, int mana) {
+        Health = health;
+        Damage = damage;
+        Mana = mana;
     }
 }
