@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ParticleBehavior : MonoBehaviour
 {
     [SerializeField]
+    UnityEvent onPickUp;
+
+    //[SerializeField]
     GameObject player;
 
     [SerializeField]
-    float ClosingDistanceForce = 100;
+    float ClosingDistanceSpeed = 1;
 
     [SerializeField]
     float pullDistance = 15;
@@ -28,6 +32,14 @@ public class ParticleBehavior : MonoBehaviour
         if ((player.transform.position - transform.position).sqrMagnitude >= pullDistance*pullDistance) return;
 
         Vector3 targetVector = (player.transform.position - transform.position).normalized;
-        GetComponent<Rigidbody>().velocity+=targetVector*1;
+        GetComponent<Rigidbody>().velocity+=targetVector* ClosingDistanceSpeed;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject == player)
+        {
+            onPickUp?.Invoke();
+            Destroy(this.gameObject);
+        }
     }
 }
