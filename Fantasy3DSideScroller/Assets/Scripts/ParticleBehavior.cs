@@ -8,7 +8,6 @@ public class ParticleBehavior : MonoBehaviour
     [SerializeField]
     UnityEvent onPickUp;
 
-    //[SerializeField]
     GameObject player;
 
     [SerializeField]
