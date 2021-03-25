@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2035111234}
-  m_IndirectSpecularColor: {r: 131.19772, g: 162.48279, b: 214.93106, a: 1}
+  m_IndirectSpecularColor: {r: 131.17673, g: 162.47339, b: 214.93546, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -247,7 +247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168218571}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.019999983, y: 1.196, z: 1.8103862}
+  m_LocalPosition: {x: 0.019999983, y: 1.196, z: 1.810391}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 405591765}
@@ -2048,7 +2048,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037846703}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.019999983, y: 1.196, z: -0.6870961}
+  m_LocalPosition: {x: 0.019999983, y: 1.196, z: -0.6870973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 405591765}
@@ -4098,7 +4098,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059789766}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.510386, y: 1.196, z: 1.1761931}
+  m_LocalPosition: {x: 2.5103908, y: 1.196, z: 1.1761955}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 405591765}
@@ -4985,7 +4985,7 @@ PrefabInstance:
     - target: {fileID: 1004690219668296865, guid: dec56916bc0c9584792363716b23f449,
         type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1111318362044479116, guid: dec56916bc0c9584792363716b23f449,
         type: 3}
@@ -5007,6 +5007,11 @@ PrefabInstance:
       propertyPath: possibleTargets.Array.data[0]
       value: 
       objectReference: {fileID: 1002970295}
+    - target: {fileID: 1927322658034911233, guid: dec56916bc0c9584792363716b23f449,
+        type: 3}
+      propertyPath: explosionForse
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7566630352339664712, guid: dec56916bc0c9584792363716b23f449,
         type: 3}
       propertyPath: m_RootOrder
