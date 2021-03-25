@@ -28,7 +28,7 @@ public class ParticleSpawner : MonoBehaviour
 
         obj.transform.position =transform.position;
         Rigidbody rigidbody = obj.GetComponent<Rigidbody>();
-        rigidbody?.AddExplosionForce(explosionForse, transform.position-new Vector3(0,-1),spawnRange);
+        rigidbody?.AddExplosionForce(explosionForse, transform.position- randomOffsetVector, spawnRange);
     }
 
 }

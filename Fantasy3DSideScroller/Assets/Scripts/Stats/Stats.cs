@@ -15,14 +15,12 @@ public class Stats : MonoBehaviour
     [SerializeField]
     int mana;
 
-
     public UnityEvent onDeath;
     public UnityEvent onHit;
     public UnityEvent onNotEnoughMana;
 
     private void Start()
     {
-        //onDeath.AddListener(Die);
     }
     public int Health
     {

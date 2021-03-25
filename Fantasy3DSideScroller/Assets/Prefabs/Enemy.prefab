@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fc0179b75167af41a0d037693490c12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectiblePrefab: {fileID: 5583523794632245383, guid: d9c35a92c95c2a849b5258222bb81981,
+  collectiblePrefab: {fileID: 1000013317980782, guid: 2cf6690298568294cb6b655c0a3aeb87,
     type: 3}
-  explosionForse: 10
+  explosionForse: 1000
   spawnRange: 2.69

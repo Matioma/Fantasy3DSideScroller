@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4896087860460209170}
   - component: {fileID: 5797783684800189907}
   - component: {fileID: 8418291743312751036}
-  - component: {fileID: 9210575314013557119}
+  - component: {fileID: 5044110100128130369}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbfffae3287acf746be37d4c80b2d0f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &9210575314013557119
+--- !u!114 &5044110100128130369
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 981037379206796626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f650126b43492b54ca4b39f79a17b785, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a49dd3f298728c4196d1e3df9c097b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
@@ -161,7 +161,18 @@ MonoBehaviour:
   mana: 0
   onDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: LoadProgress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHit:
     m_PersistentCalls:
       m_Calls: []
