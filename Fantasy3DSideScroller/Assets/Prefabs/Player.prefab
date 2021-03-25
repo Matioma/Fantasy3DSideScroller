@@ -129,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   jumpForce: 700
-  skillDamage: 10
+  skillDamage: 0
   skillCoolDown: 1
   weapon: {fileID: 3463609673157921111}
 --- !u!114 &8418291743312751036
@@ -179,6 +179,8 @@ MonoBehaviour:
   onNotEnoughMana:
     m_PersistentCalls:
       m_Calls: []
+  nextLevelExperience: 0
+  experience: 0
 --- !u!1 &3101308888813961671
 GameObject:
   m_ObjectHideFlags: 0

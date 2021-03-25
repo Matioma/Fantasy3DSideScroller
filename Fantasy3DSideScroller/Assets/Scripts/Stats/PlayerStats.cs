@@ -25,7 +25,10 @@ public class PlayerStats : Stats
     }
 
     
-    
+    public void AddExperience(float amount)
+    {
+        
+    }
 
 
 }
