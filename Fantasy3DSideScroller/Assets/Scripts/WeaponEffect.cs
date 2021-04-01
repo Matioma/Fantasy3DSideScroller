@@ -18,6 +18,7 @@ public class WeaponEffect : MonoBehaviour
         {
             EnemyStats enemy = other.gameObject.GetComponent<EnemyStats>();
 
+
             if (enemy != null) enemy.Hit(stats.Damage);
         }
       

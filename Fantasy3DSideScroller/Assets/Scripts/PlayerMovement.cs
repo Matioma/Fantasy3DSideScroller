@@ -93,9 +93,13 @@ public class PlayerMovement : MonoBehaviour
 
     public void Attack()
     {
-        if (animator != null) {
+        if (animator != null)
+        {
             //Debug.Log("Cool");
             animator.SetTrigger("Swoosh");
+        }
+        else {
+            Debug.LogError("The animator for Attacking is Null");
         }
     }
 

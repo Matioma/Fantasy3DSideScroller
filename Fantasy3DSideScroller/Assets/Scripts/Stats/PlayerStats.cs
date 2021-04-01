@@ -20,7 +20,7 @@ public class PlayerStats : Stats
         }
         set { 
             experience = value;
-            Debug.Log(experience);
+            //Debug.Log(experience);
         }
     }
 
