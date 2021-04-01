@@ -4924,8 +4924,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5825759aa0adfb54f93d6eee8a9ae84c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  ClosingDistanceForce: 10
+  onPickUp:
+    m_PersistentCalls:
+      m_Calls: []
+  ClosingDistanceSpeed: 1
+  pullDistance: 15
+  experienceAmount: 10
 --- !u!1 &1000013970829164
 GameObject:
   m_ObjectHideFlags: 0

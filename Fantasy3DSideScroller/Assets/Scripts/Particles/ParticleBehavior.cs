@@ -16,10 +16,19 @@ public class ParticleBehavior : MonoBehaviour
     [SerializeField]
     float pullDistance = 15;
 
+    [SerializeField]
+    int experienceAmount=0;
+
     void Start()
     {
         player = FindObjectOfType<PlayerController>().gameObject;
+        onPickUp.AddListener(AddExperience);
     }
+
+    void AddExperience() {
+        player.GetComponent<PlayerStats>().AddExperience(experienceAmount);
+    }
+
 
     void Update()
     {

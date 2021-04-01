@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class PlayerStats : Stats
 {
+    [SerializeField]
     UnityEvent onLevelUp;
 
     [SerializeField]
@@ -12,23 +13,19 @@ public class PlayerStats : Stats
     [SerializeField]
     float experience;
 
-
-
     float Experience
     {
         get { 
             return experience; 
         }
         set { 
-            experience = value; 
+            experience = value;
+            Debug.Log(experience);
         }
     }
 
-    
     public void AddExperience(float amount)
     {
-        
+        Experience += amount;
     }
-
-
 }
