@@ -61,11 +61,11 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void MoveRight() {
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
         MoveForward();
     }
     public void MoveLeft() {
-        transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+        transform.rotation = Quaternion.Euler(new Vector3(0, 280, 0));
         MoveForward();
     }
 

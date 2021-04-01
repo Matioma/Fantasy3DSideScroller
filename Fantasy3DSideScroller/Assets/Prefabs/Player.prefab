@@ -113,7 +113,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 82
+  m_Constraints: 88
   m_CollisionDetection: 0
 --- !u!114 &5797783684800189907
 MonoBehaviour:
@@ -177,6 +177,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onNotEnoughMana:
+    m_PersistentCalls:
+      m_Calls: []
+  onLevelUp:
     m_PersistentCalls:
       m_Calls: []
   nextLevelExperience: 0
