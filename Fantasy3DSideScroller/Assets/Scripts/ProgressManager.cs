@@ -40,7 +40,6 @@ public class ProgressManager : MonoBehaviour
 
 
     public void RestartLevel() {
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
