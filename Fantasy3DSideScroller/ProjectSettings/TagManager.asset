@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - CollectibleParticle
+  - Environment
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - 
   - PostProcessing
   - CollectibleParticle
-  - 
+  - Environment
   - 
   - 
   - 
