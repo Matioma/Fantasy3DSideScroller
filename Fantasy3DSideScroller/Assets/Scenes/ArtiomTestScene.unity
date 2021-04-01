@@ -8347,6 +8347,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyBase
       objectReference: {fileID: 0}
+    - target: {fileID: 2366363376634842552, guid: d82afc25f86afa14daf295f8a310ecad,
+        type: 3}
+      propertyPath: possibleTargets.Array.data[0]
+      value: 
+      objectReference: {fileID: 880540609}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d82afc25f86afa14daf295f8a310ecad, type: 3}
 --- !u!1001 &2641301310663268460
@@ -8424,6 +8429,11 @@ PrefabInstance:
     - target: {fileID: 2641301309920812180, guid: bad43327d5d5df94cb7e11486bfcaeb8,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2641301309920812181, guid: bad43327d5d5df94cb7e11486bfcaeb8,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2641301309920812183, guid: bad43327d5d5df94cb7e11486bfcaeb8,

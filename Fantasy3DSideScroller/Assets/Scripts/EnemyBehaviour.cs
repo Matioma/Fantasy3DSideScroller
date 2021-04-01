@@ -14,7 +14,7 @@ public class EnemyBehaviour : MonoBehaviour
 
 
     [SerializeField]
-    Transform[] possibleTargets;
+    List<Transform> possibleTargets;
 
 
     Transform target =null;
@@ -29,6 +29,9 @@ public class EnemyBehaviour : MonoBehaviour
         stats = GetComponent<Stats>();
         collider = GetComponent<SphereCollider>();
         rigidbody = GetComponent<Rigidbody>();
+
+        PlayerStats player = FindObjectOfType<PlayerStats>();
+        possibleTargets.Add(player.transform);
     }
 
     private void Update()
@@ -51,7 +54,7 @@ public class EnemyBehaviour : MonoBehaviour
             if ((atarget.position - transform.position).sqrMagnitude <= detectionRange * detectionRange) {
                 if (canSee(atarget))
                 {
-                    Debug.Log("Hit the palyer");
+                    //Debug.Log("Hit the palyer");
                     target = atarget;
                 }
             }
