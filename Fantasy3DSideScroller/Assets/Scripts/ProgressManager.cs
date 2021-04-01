@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ProgressManager : MonoBehaviour
 {
+    bool savedAtLeastOnce;
+
     Vector3 position;
     int health;
     int mana;
@@ -20,6 +23,10 @@ public class ProgressManager : MonoBehaviour
 
     public void LoadProgress()
     {
+        if (!savedAtLeastOnce) { 
+            RestartLevel();
+            return;        
+        }
         playerStats.ResetStats(health, damage, mana);
         playerStats.transform.position = position;
     }
@@ -29,5 +36,11 @@ public class ProgressManager : MonoBehaviour
         mana = playerStats.Mana;
         damage = playerStats.Damage;
         position = playerStats.transform.position;
+    }
+
+
+    public void RestartLevel() {
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
