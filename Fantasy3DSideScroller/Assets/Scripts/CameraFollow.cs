@@ -38,20 +38,34 @@ public class CameraFollow : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (CameraInLevelBoundries()) { 
-            Vector3 targetPosition = new Vector3(target.position.x, target.position.y+ offset.y, transform.position.z) ;
+        if (CameraInLevelBoundries())
+        {
+            Vector3 targetPosition = new Vector3(target.position.x, target.position.y + offset.y, transform.position.z);
             transform.position = Vector3.Lerp(transform.position, targetPosition, rate);
+        }
+        else {
+            MoveCameraBackInBoundries();
         }
     }
 
 
+
+    void MoveCameraBackInBoundries() {
+        if (transform.position.x > Max.x) { transform.position = new Vector3(Max.x, transform.position.y, transform.position.z); }
+        if (transform.position.x < Min.x) { transform.position = new Vector3(Min.x, transform.position.y, transform.position.z); }
+
+        if (transform.position.y > Max.y) { transform.position = new Vector3(transform.position.x, Max.y, transform.position.z); }
+        if (transform.position.y < Min.y) { transform.position = new Vector3(transform.position.x, Min.y, transform.position.z); }
+    }
+
+
+
     bool CameraInLevelBoundries() {
-        Vector3 position = transform.position;
+        Vector3 position = target.position;
 
         bool inBoundries = position.x > Min.x && position.x < Max.x &&
                            position.y > Min.y && position.y < Max.y &&
                            position.z > Min.z && position.z < Max.z;
-        Debug.Log(inBoundries);
-        return true;
+        return inBoundries;
     }
 }
