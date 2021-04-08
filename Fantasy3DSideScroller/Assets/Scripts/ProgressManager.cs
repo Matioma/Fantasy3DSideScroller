@@ -14,13 +14,16 @@ public class ProgressManager : MonoBehaviour
 
     Stats playerStats;
 
-
     private void Start()
     {
-        playerStats =FindObjectOfType<PlayerMovement>().GetComponent<Stats>();
+        playerStats =FindObjectOfType<PlayerStats>();
+        playerStats.onDeath.AddListener(LoadProgress);
     }
 
-
+    private void OnDestroy()
+    {
+        playerStats.onDeath.RemoveListener(LoadProgress);
+    }
     public void LoadProgress()
     {
         if (!savedAtLeastOnce) { 
@@ -41,5 +44,10 @@ public class ProgressManager : MonoBehaviour
 
     public void RestartLevel() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void LevelPassed() { 
+    
+    
     }
 }
