@@ -4,7 +4,6 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Stats))]
-//[RequireComponent(typeof(SphereCollider))]
 [RequireComponent(typeof(Rigidbody))]
 public class EnemyBehaviour : MonoBehaviour
 {
