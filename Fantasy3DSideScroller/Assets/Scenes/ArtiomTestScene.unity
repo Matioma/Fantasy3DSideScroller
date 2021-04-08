@@ -3297,6 +3297,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bae701fa280ccc240a22aeb8301c5648, type: 3}
+--- !u!114 &848541192 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 725122126804227394, guid: bae701fa280ccc240a22aeb8301c5648,
+    type: 3}
+  m_PrefabInstance: {fileID: 848541191}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c952b0ea20cc3d241ba512cee667a02e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &868668358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7233,6 +7245,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7186293072995510825, guid: 5162e22c5d79f8d448293050489607c1,
+        type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7186293072995510825, guid: 5162e22c5d79f8d448293050489607c1,
+        type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 848541192}
+    - target: {fileID: 7186293072995510825, guid: 5162e22c5d79f8d448293050489607c1,
+        type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadProgress
       objectReference: {fileID: 0}
     - target: {fileID: 7186293072995510830, guid: 5162e22c5d79f8d448293050489607c1,
         type: 3}

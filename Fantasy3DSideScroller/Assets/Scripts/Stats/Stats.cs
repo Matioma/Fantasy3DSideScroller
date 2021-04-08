@@ -19,6 +19,9 @@ public class Stats : MonoBehaviour
     public UnityEvent onHit;
     public UnityEvent onNotEnoughMana;
 
+    protected void Awake()
+    {
+    }
     private void Start()
     {
     }

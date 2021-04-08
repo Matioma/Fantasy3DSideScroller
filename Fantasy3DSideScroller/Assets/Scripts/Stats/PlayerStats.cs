@@ -13,6 +13,18 @@ public class PlayerStats : Stats
     [SerializeField]
     float experience;
 
+    private void Awake()
+    {
+        base.Awake();
+
+        ProgressManager progressManager = FindObjectOfType<ProgressManager>();
+        if (progressManager == null) { 
+            Debug.LogWarning("The scene does not have any progress manager, it is required for saving progress/restarting level"); 
+        }else { 
+            onDeath.AddListener(FindObjectOfType<ProgressManager>().LoadProgress); 
+        }
+    }
+
     float Experience
     {
         get { 
