@@ -18,11 +18,14 @@ public class ProgressManager : MonoBehaviour
     {
         playerStats =FindObjectOfType<PlayerStats>();
         playerStats.onDeath.AddListener(LoadProgress);
+
+        FindObjectOfType<ExitBehaviour>()?.onLevelPassed.AddListener(LevelPassed);
     }
 
     private void OnDestroy()
     {
         playerStats.onDeath.RemoveListener(LoadProgress);
+        FindObjectOfType<ExitBehaviour>()?.onLevelPassed.RemoveListener(LevelPassed);
     }
     public void LoadProgress()
     {
@@ -46,8 +49,7 @@ public class ProgressManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void LevelPassed() { 
-    
-    
+    public void LevelPassed() {
+        Debug.Log("YAYYYY!!");    
     }
 }

@@ -11,6 +11,7 @@ public class ExitBehaviour : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.ToLower().Equals("player")) {
+            Debug.Log("Cool");
             onLevelPassed?.Invoke();
         }
     }
