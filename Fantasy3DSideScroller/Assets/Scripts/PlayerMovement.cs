@@ -32,6 +32,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
+    public void UpdateStats(PlayerStateStats stats) {
+        speed = stats.speed;
+        jumpForce = stats.jumpForce;
+    }
 
 
     new Rigidbody rigidbody;

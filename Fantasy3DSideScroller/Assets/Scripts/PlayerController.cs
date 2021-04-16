@@ -6,9 +6,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     PlayerMovement playerMovement;
+
+    Metamorphosis metamorphosis;
     private void Awake()
     {
         playerMovement = GetComponent<PlayerMovement>();
+        metamorphosis = GetComponent<Metamorphosis>();
     }
 
 
@@ -34,6 +37,11 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.F)) {
             playerMovement.Attack();
+        }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            metamorphosis?.switchState();
         }
     }
 }

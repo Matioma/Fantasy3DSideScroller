@@ -25,6 +25,11 @@ public class PlayerStats : Stats
       
     }
 
+    public override void UpdateStats(PlayerStateStats stats)
+    {
+        base.UpdateStats(stats);
+    }
+
     float Experience
     {
         get { 

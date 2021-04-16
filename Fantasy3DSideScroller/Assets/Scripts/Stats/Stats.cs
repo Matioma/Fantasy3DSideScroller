@@ -25,6 +25,13 @@ public class Stats : MonoBehaviour
     private void Start()
     {
     }
+
+
+    public virtual void UpdateStats(PlayerStateStats stats) {
+        health = stats.health;
+        damage = stats.damage;
+    }
+
     public int Health
     {
         get
