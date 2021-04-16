@@ -32,8 +32,11 @@ public class CameraFollow : MonoBehaviour
 
     void Start()
     {
+        if (target == null)
+        {
+            target = FindObjectOfType<PlayerStats>().transform;
+        }
         offset = transform.position - target.position;
-        
     }
 
     private void FixedUpdate()
