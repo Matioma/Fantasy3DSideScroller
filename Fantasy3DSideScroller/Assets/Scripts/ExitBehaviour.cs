@@ -7,11 +7,10 @@ public class ExitBehaviour : MonoBehaviour
 {
     public UnityEvent onLevelPassed;
 
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.ToLower().Equals("player")) {
-            Debug.Log("Cool");
+            //Debug.Log("Cool");
             onLevelPassed?.Invoke();
         }
     }
