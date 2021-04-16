@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  damage: 1
+  damage: 2
   mana: 0
   onDeath:
     m_PersistentCalls:
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possibleTargets: []
-  Speed: 1
+  Speed: 5
   detectionRange: 20
 --- !u!114 &2366363376634842553
 MonoBehaviour:
