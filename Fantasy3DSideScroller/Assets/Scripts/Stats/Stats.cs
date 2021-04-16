@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Stats : MonoBehaviour
 {
     [SerializeField]
+
     int health = 1;
     [SerializeField]
     int damage = 1;
